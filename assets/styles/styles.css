@@ -1,0 +1,91 @@
+:root {
+  --red: #a82222;
+  --red-hover: #d42b2b;
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+  font-family: ubuntu;
+  z-index: 1;
+  background: linear-gradient(-10deg, #142a1b, #31a56f, #9e79f3, #3549b9);
+  background-size: 400% 400%;
+  width: 100vw;
+  height: 100vh;
+  animation: animate 15s ease infinite;
+  margin: 0;
+}
+
+@keyframes animate {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+#main-canvas {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+button {
+  position: fixed;
+  background: var(--red);
+  border-radius: 30px;
+  color: #fff;
+  padding: 10px 0;
+  height: 90px;
+  width: 100px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  bottom: 20px;
+  left: calc(50% - 100px / 2);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  transform: perspective(100px) rotateX(20deg);
+  box-shadow: inset 0 -12px 5px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+  background: var(--red-hover);
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.9) perspective(100px) rotateX(30deg);
+  box-shadow: inset 0 -12px 5px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#amount-spins {
+  color: #fff;
+  position: fixed;
+  font-size: 32px;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  font-size: 50px;
+  font-family: "Nova Square", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#bet-result {
+  color: #fff;
+  position: fixed;
+  font-size: 32px;
+  bottom: 0;
+  margin: 20px;
+  font-size: 50px;
+  font-family: "Nova Square", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  right: 0;
+}
