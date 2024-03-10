@@ -1,0 +1,49 @@
+:root {
+  --red: #a82222;
+  --red-hover: #d42b2b;
+  --red-active: #941e1e;
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+  background-image: url('https://i.imgur.com/j4BJ0v7.jpeg');
+  background-position: center;
+  margin: 0;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+button {
+  position: fixed;
+  background: var(--red);
+  border-radius: 50%;
+  color: #fff;
+  padding: 10px 0;
+  height: 100px;
+  width: 100px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  bottom: 10px;
+  left: calc(50% - 100px / 2);
+  transition: transform 0.1s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transform: perspective(100px) rotateX(20deg);
+}
+
+button:hover {
+  background: var(--red-hover);
+  cursor: pointer;
+}
+
+button:active {
+  background: var(--red-active);
+  transform: scale(0.9) perspective(100px) rotateX(0deg);
+}
